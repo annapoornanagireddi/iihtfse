@@ -1,0 +1,36 @@
+<form name = "form" novalidate >
+    <div>
+        <label for ="projectNm">Project:</label>
+        <input type= "text" >
+        <button type="submit" >Search</button>
+        <label>Sort Task By:</label>
+        <button type="button"  (click) = "sortUserByFirstNm()">Start Date</button>
+       
+        <button type="button" (click) = "sortUserByLastNm()">End Date</button>
+        
+        <button type="button" (click) = "sortUserById()">Priority</button> 
+         
+        <button type="button" (click) = "sortUserById()">Completed</button> 
+      </div> 
+<div>
+        <table border="1" >
+                <tr>
+               <th>Task</th>
+               <th>Parent</th>
+               <th>Priority</th>
+               <th>StartDt</th>
+               <th>EndDt</th>
+             </tr>
+               <tr  *ngFor="let task of tasks">
+               <td>{{task.taskNm}}</td>
+               <td>{{task.parentTaskId}}</td>
+               <td>{{task.priority}}</td>      
+               <td>{{task.startDt}}</td>    
+               <td>{{task.endDt}}</td>
+               <td><button type="button" (click)="deleteUser(task)" >End task</button></td>
+               <td><button type="button" (click)="updateUserDetails(task)">Edit</button></td>
+               </tr>
+           </table>
+       
+</div>
+      </form>

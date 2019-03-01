@@ -1,0 +1,45 @@
+<form name = "form" novalidate >
+  <div>
+    <label for ="firstName">First name:</label>
+    <input type= "text" class="form-control" name ="firstName" [(ngModel)]="user.firstName" #firstName = "ngModel">
+  </div>
+  <div>
+      <label for ="lastName">Last Name:</label>
+      <input type= "text" name ="lastName" [(ngModel)]="user.lastName" #lastName = "ngModel">
+    </div>
+    <div>
+        <label for ="employeeId">EmployeeId:</label>
+        <input type= "text" name ="employeeId" [(ngModel)]="user.employeeId" #employeeId = "ngModel">
+      </div>
+      <button type="submit" (click) = "addUserDetails()">Add</button>
+      <div>{{ user.status }}</div>
+      {{status}}
+      <button type="submit">Reset</button>      
+  <div>
+      <input type= "text" name ="empId"  [(ngModel)]="user.employeeId">
+      <button type="submit" (click) = "searchUserDetails()">Search</button>
+    </div>
+       <table border="1" >
+         <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>EmployeeId</th>
+      </tr>
+        <tr  *ngFor="let user of users">
+        <td contenteditable="true">{{user.firstName}}</td>      
+        <td contenteditable="true">{{user.lastName}}</td>    
+        <td  contenteditable="true">{{user.employeeId}}</td>
+        <td><button type="button" (click)="deleteUser(user)" >X</button></td>
+        <td><button type="button" (click)="updateUserDetails(user)">Edit</button></td>
+        </tr>
+    </table>
+
+      Sort:
+      <button type="button"  (click) = "sortUserByFirstNm()">First Name</button>
+     
+      <button type="button" (click) = "sortUserByLastNm()">Last Name</button>
+      
+      <button type="button" (click) = "sortUserById()">Id</button> 
+         
+
+</form>
