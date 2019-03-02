@@ -10,6 +10,7 @@ import { ViewTaskComponent } from './view-task/view-task.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { UserService} from "./services/add-user.service";
 import { ProjectService} from "./services/add-project.service";
@@ -30,7 +31,8 @@ import { ViewTaskService } from "./services/view-task.service";
     BrowserModule,
     routing,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TooltipModule.forRoot()
   ],
   providers: [UserService,ProjectService,TaskService,ViewTaskService],
   bootstrap: [AppComponent]

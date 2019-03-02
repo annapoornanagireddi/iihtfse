@@ -5,10 +5,18 @@
   </h1>
 </div>
 
+<span item-width="100%">
 <button [routerLink]="['/addProject']" type= "button">Add Project</button>
+</span>
+<span  item-width="20px">
 <button [routerLink]="['/addTask']" type= "button">Add Task</button>
+</span>
+<span>
 <button [routerLink]="['/addUser']" type= "button">Add User</button>
-<button [routerLink]="['/viewTask']" type= "button">view Task</button>
+</span>
+<span>
+<button [routerLink]="['/viewTask']" type= "button">View Task</button>
+</span>
 
 
 <router-outlet></router-outlet>

@@ -5,12 +5,7 @@
         <button type="submit" >Search</button>
       </div> 
 
-      <div>
-          <label for ="parentTaskId">Parent Task:</label>
-          <input type= "text" name ="parentTaskId"  [(ngModel)]="task.parentTaskId" #task.ptask.parentTaskId = "ngModel">
-          <button type="submit" >Search</button>
-        </div>
-   
+     
   <div>
       <label for ="taskNm">Task:</label>
       <input type= "text" name ="taskNm"  [(ngModel)]="task.taskNm" #taskNm = "ngModel">
@@ -21,10 +16,14 @@
           <input type="checkbox" name="tandc" id="tandc" value="true"><label for="tandc" > Parent Task</label>
         </div> 
       <label for ="priority">Priority:</label>
-    <input type="range" min="1" max="30" name="priority" [(ngModel)]="task.priority" #priority = "ngModel">
+      <input type="range" class="input-range" min="1" max="30" id="priority" name = "priority" [(ngModel)]="task.priority" #priority = "ngModel"/>
   </div>
+  <div>
+      <label for ="parentTaskId">Parent Task:</label>
+      <input type= "text" name ="parentTaskId"  [(ngModel)]="task.parentTaskId" #task.ptask.parentTaskId = "ngModel">
+      <button type="submit" >Search</button>
+    </div>
  
-   
       <div>
                    <input type= "text" name ="startDt" placeholder="Start Date"  [(ngModel)]="task.startDt" #startDt = "ngModel">
           <input type= "text" name ="endDt" placeholder="End Date" [(ngModel)]="task.endDt" #endDt = "ngModel">
@@ -38,6 +37,9 @@
       <div>
       <button type="button" (click)="addTaskDetails()">Add Task</button>
       <button type="submit" >Reset</button>
+      <div>
+      {{task.saveStatus}}
+    </div>
     </div>
   </form>
   

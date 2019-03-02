@@ -8,4 +8,5 @@ startDt : string="";
 endDt : string="";
 priority : string;
 status : string;
+saveStatus:string;
 }

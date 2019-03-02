@@ -24,7 +24,7 @@ export class AddTaskComponent implements OnInit {
         this.task.endDt = data.endDt;
         this.task.priority = data.priority;
         this.task.status = data.status;
-  
+        this.task.saveStatus = data.saveStatus;
       }
     )
   }

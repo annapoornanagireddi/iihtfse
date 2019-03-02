@@ -1,7 +1,7 @@
 <form name = "form" novalidate >
   <div>
     <label for ="firstName">First name:</label>
-    <input type= "text" class="form-control" name ="firstName" [(ngModel)]="user.firstName" #firstName = "ngModel">
+    <input type= "text"  name ="firstName" [(ngModel)]="user.firstName" #firstName = "ngModel">
   </div>
   <div>
       <label for ="lastName">Last Name:</label>
@@ -10,11 +10,11 @@
     <div>
         <label for ="employeeId">EmployeeId:</label>
         <input type= "text" name ="employeeId" [(ngModel)]="user.employeeId" #employeeId = "ngModel">
-      </div>
+
       <button type="submit" (click) = "addUserDetails()">Add</button>
-      <div>{{ user.status }}</div>
-      {{status}}
-      <button type="submit">Reset</button>      
+     {{ user.status }}
+      <button type="submit">Reset</button>  
+    </div>    
   <div>
       <input type= "text" name ="empId"  [(ngModel)]="user.employeeId">
       <button type="submit" (click) = "searchUserDetails()">Search</button>

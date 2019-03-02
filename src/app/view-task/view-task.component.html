@@ -4,13 +4,13 @@
         <input type= "text" >
         <button type="submit" >Search</button>
         <label>Sort Task By:</label>
-        <button type="button"  (click) = "sortUserByFirstNm()">Start Date</button>
+        <button type="button"  (click) = "sortTasksByStartDt()">Start Date</button>
        
-        <button type="button" (click) = "sortUserByLastNm()">End Date</button>
+        <button type="button" (click) = "sortTasksByEndDt()">End Date</button>
         
-        <button type="button" (click) = "sortUserById()">Priority</button> 
+        <button type="button" (click) = "sortTasksByPriority()">Priority</button> 
          
-        <button type="button" (click) = "sortUserById()">Completed</button> 
+        <button type="button" (click) = "sortTasksByStatus()">Completed</button> 
       </div> 
 <div>
         <table border="1" >
@@ -27,7 +27,7 @@
                <td>{{task.priority}}</td>      
                <td>{{task.startDt}}</td>    
                <td>{{task.endDt}}</td>
-               <td><button type="button" (click)="deleteUser(task)" >End task</button></td>
+               <td><button type="button" (click)="endTask(task)" >End task</button></td>
                <td><button type="button" (click)="updateUserDetails(task)">Edit</button></td>
                </tr>
            </table>
